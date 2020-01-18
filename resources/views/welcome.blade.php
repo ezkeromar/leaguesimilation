@@ -85,7 +85,7 @@
                 $('.active .week').html(week)
                 $('.active .play').data('week', week)
                 $('.active .next-week').data('week', week)
-                $.get( "/next-week", { week: week, goup: group })
+                $.get( "/public/next-week", { week: week, goup: group })
                     .done(function( data ) {
                     if(data != undefined) {
                         for (let i = 0; i < data.matches.length; i++) {
