@@ -14,14 +14,20 @@ class TeamsTableSeeder extends Seeder
     public function run()
     {
         DB::table('teams')->insert([
-            'title' => Str::random(10),
-            'points' => 60,
-            'matches_played' => 6,
-            'matches_won' => 4,
-            'matches_drawn' => 2,
-            'matches_lost' => 0,
-            'goals_difference' => 10,
-            'group_id' => 1,
+            'title' => 'Liverpool',
+            'group_id' => 1
+        ]);
+        DB::table('teams')->insert([
+            'title' => 'Manshester',
+            'group_id' => 1
+        ]);
+        DB::table('teams')->insert([
+            'title' => 'Barcelone',
+            'group_id' => 1
+        ]);
+        DB::table('teams')->insert([
+            'title' => 'Real Madrid',
+            'group_id' => 1
         ]);
     }
 }

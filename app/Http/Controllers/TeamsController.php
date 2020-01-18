@@ -12,8 +12,8 @@ class TeamsController extends Controller
         $groupInfo = Group::first();
         $teams = $groupInfo
             ->teams()
-            ->select('title', 'points', 'matches_played', 'matches_won', 'matches_drawn', 'matches_lost', 'goals_difference')
+            ->select('title')
             ->get();
-        return view('welcome', array('title' => $groupInfo->title, 'teams' => $teams));
+        return view('welcome', array('title' => $groupInfo->title, 'id' => $groupInfo->id, 'teams' => $teams));
     }
 }

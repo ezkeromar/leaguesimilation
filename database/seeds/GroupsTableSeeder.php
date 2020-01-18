@@ -14,7 +14,10 @@ class GroupsTableSeeder extends Seeder
     public function run()
     {
         DB::table('groups')->insert([
-            'title' => Str::random(10)
+            'title' => 'A'
+        ]);
+        DB::table('groups')->insert([
+            'title' => 'B'
         ]);
     }
 }

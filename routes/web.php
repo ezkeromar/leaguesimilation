@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'TeamsController@index');
+Route::get('/next-week', 'MatchesController@nextWeek');
+Route::get('/final-result', 'MatchesController@finalResult');
